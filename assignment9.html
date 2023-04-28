@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignments</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">Java Script Assignments</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" readonly value="AzaanUllah-Khan" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">GITHUB</button>
+            </form>
+        </div>
+    </div>
+</nav>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script>
+    var educationQualifications = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M. Phil."];
+
+    document.write("<h3>Educational Qualifications in Pakistan:</h3>");
+    document.write("<ul>");
+    for (let i = 0; i < educationQualifications.length; i++) {
+      document.write("<li>" + educationQualifications[i] + "</li>");
+    }
+    document.write("</ul>");
+    document.write("<hr>");
+    var f1 = prompt("Enter First Name")
+    var f2 = prompt("Enter Second Name")
+    var f3 = prompt("Enter Third Name")
+    var s1 = prompt("Enter Marks of " + f1)
+    var s2 = prompt("Enter Marks of " + f2)
+    var s3 = prompt("Enter Marks of " + f3)
+    let studentNames = [f1, f2, f3];
+    let studentScores = [s1, s2, s3];
+    let totalMarks = 500;
+
+    for (let i = 0; i < studentNames.length; i++) {
+      let score = studentScores[i];
+      let percentage = (score / totalMarks) * 100;
+      document.write(studentNames[i] + " scored " + score + " marks out of " + totalMarks + ", which is " + percentage + "%." + "<br>");
+    }
+    document.write("<hr>")
+    let colors = ["black"];
+    document.write("Original array: " + colors);
+
+    let colorToAddToStart = prompt("Enter color to add to the beginning:");
+    colors.unshift(colorToAddToStart);
+    document.write("Array after adding color to the beginning: " + colors);
+
+    let colorToAddToEnd = prompt("Enter color to add to the end:");
+    colors.push(colorToAddToEnd);
+    document.write("Array after adding color to the end: " + colors);
+
+    colors.splice(0, 0, "purple", "yellow");
+    document.write("Array after adding two more colors to the beginning: " + colors);
+
+    colors.shift();
+    document.write("Array after deleting first color: " + colors);
+
+    colors.pop();
+    document.write("Array after deleting last color: " + colors);
+
+    let indexToAdd = prompt("Enter index to add color:");
+    let colorToAdd = prompt("Enter color to add at index " + indexToAdd + ":");
+    colors.splice(indexToAdd, 0, colorToAdd);
+    document.write("Array after adding color at index " + indexToAdd + ": " + colors);
+
+    let indexToRemove = prompt("Enter index to start deleting colors:");
+    let numToRemove = prompt("Enter number of colors to delete:");
+    colors.splice(indexToRemove, numToRemove);
+    document.write("Array after deleting " + numToRemove + " colors from index " + indexToRemove + ": " + colors);
+    document.write("<hr>")
+    let scores = [80, 70, 90, 60, 85];
+    scores.sort();
+    document.write(scores);
+    document.write("<hr>");
+    let cities = ['Karachi', 'Lahore', 'Islamabad', 'Rawalpindi', 'Quetta', 'Peshawar'];
+    let selectedCities = [];
+    var start = prompt("Enter index to start")
+    var end = prompt("Enter index to end")
+    selectedCities = cities.slice(start, end);
+    document.write(selectedCities);
+    document.write("<hr>")
+    var arr = ["azaan", "is", "a", "good", "boy"]
+    var neww = arr.join(" ")
+    document.write(neww);
+    document.write("<hr>");
+    var myArray = [];
+    for (var i = 0; i < 4; i++) {
+      let value = prompt("Enter a value to add to the array (or click Cancel to stop):");
+      myArray.push(value);
+    }
+    document.write("h1" + "FIFO = " + "</h1>" + myArray)
+    document.write("<hr>");
+    var ray = [];
+    for (var i = 0; i < 4; i++) {
+      let value = prompt("Enter a value to add to the array (or click Cancel to stop):");
+      ray.unshift(value);
+    }
+    document.write("h1" + "FIFO = " + "</h1>" + ray)
+    document.write("<hr>")
+    // create an array of phone manufacturers
+    var phoneManufacturers = ["Apple", "Samsung", "Motorola", "Nokia", "Sony", "Haier"];
+
+    // create a select element and set its attributes
+    var selectElement = document.createElement("select");
+    selectElement.setAttribute("id", "phoneManufacturers");
+
+    // create options for each phone manufacturer and add them to the select element
+    for (var i = 0; i < phoneManufacturers.length; i++) {
+      var optionElement = document.createElement("option");
+      optionElement.setAttribute("value", phoneManufacturers[i]);
+      optionElement.innerHTML = phoneManufacturers[i];
+      selectElement.appendChild(optionElement);
+    }
+
+    // display the select element on the page using document.write()
+    document.write(selectElement.outerHTML);
+
+  </script>
+</body>
+
+</html>

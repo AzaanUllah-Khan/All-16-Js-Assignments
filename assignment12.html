@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1st Assignment</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">Java Script Assignments</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" readonly value="AzaanUllah-Khan" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">GITHUB</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script>
+        // 1 starts
+        var first = prompt("Enter your First Name")
+        var Last = prompt("Enter your last Name")
+        var fullName = first +" "+Last
+        document.write("hello "+fullName)
+        document.write("<hr>")
+        var favPhone = prompt("Enter you favourate Mobiile model");
+        var len = favPhone.length
+        document.write("My Favourite Phone is: "+favPhone);
+        document.write("Length of Favourite phone is: "+len);
+        document.write("<hr>")
+        var string = "Pakistani"
+        var ind = prompt("Which index you want to check")
+        var index = string[ind]
+        document.write(index);
+        document.write("<hr>")
+        var check = "Hello World"
+        var li = check.lastIndexOf("l")
+        document.write(li);
+        var replace = "hyderabad"
+        var replacer = "hyder"
+        var nw = replace.replace(replacer,"Islam")
+        document.write(nw);
+        document.write("<hr>")
+        //6 start
+        // At The End
+        //6 ends
+        var inp = prompt("Enter any Word").toUpperCase();
+        document.write(inp);
+        document.write("<hr>")
+        var inpp = prompt("Enter Any Word")
+        var titlee = inpp = inpp[0].toUpperCase()+inpp.slice(1)
+        document.write(titlee);
+        document.write("<hr>")
+        var dot = 34.45
+        var check = dot.toString();
+        var ind = check.indexOf(".")
+        var split = check.split("")
+        var final = split.slice(0,ind)
+        var final2 = split.slice(ind+1)
+        var neww = final+final2;
+        neww = neww.toString()
+        document.write(neww);
+        document.write("<hr>")
+        var user = prompt("Enter username")
+        var flag = false
+        for(i=0;i<user.length;i++){
+            if(user[i]=="@" || user[i]=="!" || user[i]=="["){
+                flag = true
+            }
+        }
+        if(flag==true){
+            document.write("Enter valid username")
+            document.write("<hr>")
+        }
+        else{
+            document.write(user)
+            document.write("<hr>")
+        }
+        var a = ["apple", "mango", "banana"]
+        var pro = prompt("What you want to buy")
+        var here = false
+        for (i = 0; i < pro.length; i++) {
+            if (pro == a[i]) {
+                here = true
+                var indexx = i
+            }
+        }
+        if (here == false) {
+            document.write("This item is not available")
+            document.write("<hr>")
+        }
+        else{
+            document.write("We have "+pro+" at "+indexx+" index Number")
+            document.write("<hr>")
+        }
+        // 12 start
+        //    end
+        // 12 end
+        var naem = prompt("Write any name")
+        naem = naem.split("")
+        for(i=0;i<naem.length;i++){
+            document.write(naem[i]+"<br />")
+        }
+        var tet = "Pakistan"
+        var tl = tet.length
+        var nw = tet[tl-1]
+        document.write("Last index of pakistan is "+nw);
+        document.write("<hr>")
+        var text = "The hello The haha"
+        text = text.split(" ")
+        var count = 0
+        for(i=0;i<text.length;i++){
+            if(text[i]=="The"){
+                var count = count+1
+            }
+        }
+        document.write(count);
+    </script>
+</body>
+
+</html>

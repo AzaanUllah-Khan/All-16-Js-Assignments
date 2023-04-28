@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">Java Script Assignments</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" readonly value="AzaanUllah-Khan" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">GITHUB</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script>
+        for (i = 1; i < 11; i++) {
+            document.write(i + "<br/>")
+        }
+        document.write("<hr>")
+        var num = parseInt(prompt("Enter the number whose multiplication table you want to print: "));
+        var length = parseInt(prompt("Enter the length of the table: "));
+
+
+        for (i = 1; i <= length; i++) {
+            var result = num * i;
+            document.write(num + " x " + i + " = " + result + "<br>");
+        }
+        document.write("<hr>")
+        var fruits = ["apple", "banana", "mango", "orange", "strawberry"];
+
+        for (i = 0; i < fruits.length; i++) {
+            document.write("Fruit at index " + i + " is " + fruits[i] + "<br>");
+        }
+        document.write("<hr>")
+        // Counting: 1 to 15
+        let counting = "Counting: ";
+        for (let i = 1; i <= 15; i++) {
+            counting += i + ", ";
+        }
+        document.write(counting.slice(0, -2) + "<br>"); // removing last comma and space
+
+        // Reverse counting: 10 to 1
+        let reverse = "Reverse counting: ";
+        for (let i = 10; i >= 1; i--) {
+            reverse += i + ", ";
+        }
+        document.write(reverse.slice(0, -2) + "<br>"); // removing last comma and space
+
+        // Even numbers: 0 to 20
+        let even = "Even: ";
+        for (let i = 0; i <= 20; i += 2) {
+            even += i + ", ";
+        }
+        document.write(even.slice(0, -2) + "<br>"); // removing last comma and space
+
+        // Odd numbers: 1 to 19
+        let odd = "Odd: ";
+        for (let i = 1; i <= 19; i += 2) {
+            odd += i + ", ";
+        }
+        document.write(odd.slice(0, -2) + "<br>"); // removing last comma and space
+
+        // Series: 2k to 20k
+        let series = "Series: ";
+        for (let i = 1; i <= 10; i++) {
+            series += i * 2 + "k, ";
+        }
+        document.write(series.slice(0, -2)); // removing last comma and space
+
+        document.write("<hr>")
+        let A = ["cake", "apple pie", "cookie", "chips", "patties"];
+
+        let searchItem = prompt("Enter the item you want to search for:");
+
+        let isFound = false;
+        for (let i = 0; i < A.length; i++) {
+            if (A[i] === searchItem) {
+                isFound = true;
+                break;
+            }
+        }
+
+        if (isFound === true) {
+            document.write(searchItem + " is found in the list.");
+        } else {
+            document.write(searchItem + " is not found in the list.");
+        }
+        document.write("<hr>")
+        let b = [24, 53, 78, 91, 12];
+
+        let maxNumber = b[0];
+        for (let i = 1; i < b.length; i++) {
+            if (b[i] > maxNumber) {
+                maxNumber = b[i];
+            }
+        }
+
+        document.write("The largest number in the array is: " + maxNumber);
+
+        document.write("<hr>")
+        let c = [24, 53, 78, 91, 12];
+
+        let smNumber = c[0];
+        for (let i = 1; i < b.length; i++) {
+            if (c[i] < smNumber) {
+                smNumber = c[i];
+            }
+        }
+
+        document.write("The smallest number in the array is: " + smNumber);
+        document.write("<hr>")
+        for (let i = 1; i <= 100; i++) {
+            if (i % 5 === 0) {
+                document.write(i + " , ");
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
