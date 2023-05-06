@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">Java Script Assignments</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" readonly value="AzaanUllah-Khan" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">GITHUB</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script>
+        var main = new Date()
+        document.write(main);
+        document.write("<hr>")
+
+
+
+        var na1 = prompt("1s name")
+        var na2 = prompt("2d name")
+        function addNames(na1, na2) {
+            document.write("Hello " + na1 + na2);
+        }
+        addNames(na1, na2);
+        document.write("<hr>")
+
+
+
+        var n1 = + prompt("1s num")
+        var n2 = + prompt("2d num")
+        function addNums(num1, num2) {
+            document.write(num1 + num2);
+        }
+        addNums(n1, n2);
+        document.write("<hr>")
+
+
+
+        var num = prompt("enter number")
+        function square() {
+            document.write(num * num)
+        }
+        square()
+        document.write("<hr>")
+
+
+
+        var start = prompt("starting number")
+        var end = prompt("ending number")
+        function displayCounting() {
+            for (var i = start; i > end; i++) {
+                document.write(i)
+            }
+        }
+        displayCounting()
+        document.write("<hr>")
+
+
+
+        var b = prompt("Enter Base")
+        var p = prompt("Enter Perpendicular")
+        function hypotenus(base, perpendicular) {
+            var bs =+ base*base
+            var ps =+ perpendicular*perpendicular
+            var hypotenuses = bs+ps
+            document.write(hypotenuses);
+        }
+        hypotenus(b,p)
+        document.write("<hr>")
+
+
+
+        var width = prompt("Enter width of the rectangle")
+        var height = prompt("Enter width of the height")
+        function areaOfRectangle(w,h){
+            document.write(w*h)
+        }
+        areaOfRectangle(width,height)
+        document.write("<hr>")
+
+
+
+        function checkNamePalindrome() {
+            var name = "azaan";
+            var nameLength = name.length;
+            var name1 = name.slice(0, Math.floor(nameLength / 2));
+            var name2 = name.slice(Math.ceil(nameLength / 2));
+
+            var reversedName2 = name2.split('').reverse().join('');
+
+            if (name1 === reversedName2) {
+                document.write("It is a palindrome");
+                document.write("<hr>");
+            } else {
+                document.write("It is not a palindrome");
+                document.write("<hr>");
+            }
+        }
+
+        checkNamePalindrome();
+
+
+        
+        var word = "a quIck brown fox jumps over a lazy dog";
+        
+        function capitalizeEachWord() {
+            var arr = word.split(" ");
+            for (var i = 0; i < arr.length; i++) {
+                arr[i] = arr[i][0].toUpperCase() + arr[i].slice(1).toLowerCase();
+            }
+            var capitalizedWord = arr.join(" ");
+            document.write(capitalizedWord);
+        }
+        
+        capitalizeEachWord();
+        document.write("<hr>")
+        document.write("Three excercises left")
+    </script>
+</body>
+
+</html>
